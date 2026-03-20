@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>情侶深度對話卡牌 — 80 個讓靈魂靠近的提問</title>
+<meta name="description" content="專為情侶設計的深度對話卡牌遊戲。80 個精心設計的提問，從心動悸動到信任成長，讓你們的靈魂更靠近。適合約會、露營、旅行時光。">
+<meta name="keywords" content="情侶遊戲,對話卡牌,約會遊戲,深度對話,情侶互動,露營遊戲,關係經營,愛情遊戲">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fattho0919.github.io/couple-cards/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="情侶深度對話卡牌 — 80 個讓靈魂靠近的提問">
+<meta property="og:description" content="專為情侶設計的星空浪漫風抽卡遊戲。80 道深度提問，從吸引悸動到信任成長，最適合約會夜晚。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fattho0919.github.io/couple-cards/">
+<meta property="og:image" content="https://fattho0919.github.io/couple-cards/og-image.png">
+<meta property="og:locale" content="zh_TW">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="情侶深度對話卡牌 — 80 個讓靈魂靠近的提問">
+<meta name="twitter:description" content="專為情侶設計的星空浪漫風抽卡遊戲，80 道深度提問，適合約會夜晚。">
+
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --sky-deep:#0a0e27;
+  --sky-mid:#111940;
+  --sky-light:#1a2555;
+  --star-gold:#ffd475;
+  --star-white:#e8e4ff;
+  --accent-pink:#ff6b9d;
+  --accent-rose:#c44569;
+  --accent-warm:#ffb347;
+  --card-front:#141a3a;
+  --card-border:rgba(255,212,117,.25);
+  --text-primary:#e8e4ff;
+  --text-secondary:rgba(232,228,255,.6);
+  --glass:rgba(16,20,50,.65);
+  --glass-border:rgba(255,255,255,.08);
+}
+html,body{height:100%;overflow:hidden}
+body{
+  font-family:'Noto Sans TC',sans-serif;
+  background:var(--sky-deep);
+  color:var(--text-primary);
+  display:flex;flex-direction:column;
+  position:relative;
+  overscroll-behavior:none;
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+}
+
+/* === WELCOME SCREEN === */
+.welcome-overlay{
+  position:fixed;inset:0;z-index:300;
+  background:var(--sky-deep);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:20px;text-align:center;padding:40px 28px;
+  transition:opacity .5s, transform .5s;
+}
+.welcome-overlay.hidden{opacity:0;pointer-events:none;transform:scale(1.05)}
+.welcome-icon{font-size:56px;margin-bottom:4px}
+.welcome-title{
+  font-family:'Noto Serif TC',serif;
+  font-size:24px;font-weight:700;
+  background:linear-gradient(135deg,var(--star-gold),var(--accent-pink));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  line-height:1.4;
+}
+.welcome-subtitle{
+  font-size:14px;color:var(--text-secondary);line-height:1.8;
+  max-width:320px;
+}
+.welcome-form{
+  display:flex;flex-direction:column;gap:12px;
+  width:100%;max-width:300px;margin-top:8px;
+}
+.welcome-label{font-size:12px;color:var(--text-secondary);text-align:left}
+.welcome-input{
+  width:100%;padding:12px 16px;border-radius:14px;
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--glass-border);
+  color:var(--text-primary);font-size:15px;
+  font-family:'Noto Sans TC',sans-serif;
+  outline:none;text-align:center;
+  transition:border-color .2s;
+}
+.welcome-input:focus{border-color:var(--star-gold)}
+.welcome-input::placeholder{color:var(--text-secondary)}
+.welcome-start-btn{
+  margin-top:12px;padding:14px;border-radius:16px;
+  font-family:'Noto Serif TC',serif;
+  font-size:16px;font-weight:700;letter-spacing:2px;
+  color:#fff;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--accent-rose),var(--accent-pink));
+  box-shadow:0 4px 20px rgba(255,107,157,.3);
+  transition:all .25s;
+}
+.welcome-start-btn:active{transform:scale(.97)}
+.welcome-solo{
+  font-size:12px;color:var(--text-secondary);
+  cursor:pointer;text-decoration:underline;
+  text-underline-offset:3px;
+  margin-top:4px;
+}
+
+/* === STARS === */
+.stars-container{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.star{position:absolute;border-radius:50%;background:#fff}
+.star.twinkle{animation:twinkle var(--dur) ease-in-out infinite alternate}
+@keyframes twinkle{0%{opacity:var(--o1)}100%{opacity:var(--o2)}}
+.shooting-star{
+  position:absolute;width:2px;height:2px;background:#fff;border-radius:50%;
+  opacity:0;
+}
+.shooting-star::after{
+  content:'';position:absolute;top:0;right:0;
+  width:60px;height:1px;
+  background:linear-gradient(to left,rgba(255,255,255,.6),transparent);
+  transform:rotate(-25deg);transform-origin:right center;
+}
+@keyframes shoot{
+  0%{opacity:0;transform:translate(0,0)}
+  5%{opacity:1}
+  70%{opacity:1}
+  100%{opacity:0;transform:translate(-250px,150px)}
+}
+
+/* === AURORA === */
+.aurora{
+  position:fixed;top:-30%;left:-20%;
+  width:140%;height:60%;
+  background:radial-gradient(ellipse at 30% 50%,rgba(100,60,180,.08) 0%,transparent 60%),
+             radial-gradient(ellipse at 70% 40%,rgba(60,100,200,.06) 0%,transparent 50%);
+  filter:blur(60px);
+  animation:auroraMove 20s ease-in-out infinite alternate;
+  pointer-events:none;z-index:0;
+}
+@keyframes auroraMove{0%{transform:translateX(-5%) rotate(-2deg)}100%{transform:translateX(5%) rotate(2deg)}}
+
+/* === AD BANNER (TOP) === */
+.ad-banner-top{
+  width:100%;min-height:50px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;z-index:2;
+  background:rgba(0,0,0,.2);
+  border-bottom:1px solid var(--glass-border);
+  font-size:10px;color:var(--text-secondary);
+}
+.ad-banner-top ins{display:block;width:320px;height:50px}
+
+/* === LAYOUT === */
+.app{display:flex;flex-direction:column;height:100dvh;position:relative;z-index:1}
+
+/* HEADER */
+.header{
+  padding:10px 20px 4px;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-shrink:0;
+}
+.title{
+  font-family:'Noto Serif TC',serif;
+  font-size:17px;font-weight:700;
+  background:linear-gradient(135deg,var(--star-gold),var(--accent-pink));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  letter-spacing:1px;
+}
+.header-right{display:flex;align-items:center;gap:10px}
+.progress-pill{
+  font-size:11px;color:var(--text-secondary);
+  background:var(--glass);border:1px solid var(--glass-border);
+  padding:4px 12px;border-radius:20px;
+  backdrop-filter:blur(10px);
+}
+.share-btn{
+  background:none;border:none;cursor:pointer;
+  font-size:18px;padding:4px;
+  filter:drop-shadow(0 0 4px rgba(255,212,117,.3));
+}
+
+/* TURN BANNER */
+.turn-banner{
+  text-align:center;padding:2px 0 4px;flex-shrink:0;
+  font-size:13px;color:var(--text-secondary);
+  min-height:24px;
+  transition:opacity .3s;
+}
+.turn-banner .player-name{
+  color:var(--star-gold);font-weight:700;
+  font-family:'Noto Serif TC',serif;
+}
+
+/* MAIN AREA */
+.main{flex:1;display:flex;align-items:center;justify-content:center;position:relative;padding:0 20px;min-height:0;overflow:hidden}
+
+/* === CARD === */
+.card-scene{width:min(320px,85vw);height:100%;max-height:min(400px,52vh);perspective:900px;cursor:pointer;aspect-ratio:3/4.2}
+.card-inner{
+  position:relative;width:100%;height:100%;
+  transition:transform .7s cubic-bezier(.4,.2,.2,1);
+  transform-style:preserve-3d;
+}
+.card-inner.flipped{transform:rotateY(180deg)}
+.card-face{
+  position:absolute;inset:0;
+  backface-visibility:hidden;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+/* BACK */
+.card-back{
+  background:linear-gradient(145deg,var(--sky-mid),var(--card-front));
+  border:1.5px solid var(--card-border);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:16px;
+  box-shadow:0 8px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05);
+}
+.card-back-icon{font-size:52px;filter:drop-shadow(0 0 20px rgba(255,212,117,.3))}
+.card-back-text{
+  font-family:'Noto Serif TC',serif;
+  font-size:15px;color:var(--text-secondary);
+  letter-spacing:4px;
+}
+.card-back-deco{
+  position:absolute;inset:12px;
+  border:1px solid rgba(255,212,117,.1);
+  border-radius:14px;pointer-events:none;
+}
+.card-back .corner-star{
+  position:absolute;font-size:10px;opacity:.3;color:var(--star-gold);
+}
+.card-back .corner-star:nth-child(3){top:20px;left:20px}
+.card-back .corner-star:nth-child(4){top:20px;right:20px}
+.card-back .corner-star:nth-child(5){bottom:20px;left:20px}
+.card-back .corner-star:nth-child(6){bottom:20px;right:20px}
+
+/* FRONT */
+.card-front{
+  transform:rotateY(180deg);
+  background:linear-gradient(160deg,#0f1535,#1a1f45 40%,#151a3a);
+  border:1.5px solid var(--card-border);
+  display:flex;flex-direction:column;
+  padding:20px 20px;
+  box-shadow:0 8px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.06);
+}
+.card-stage{
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--accent-pink);font-weight:700;
+  margin-bottom:4px;
+}
+.card-number{
+  font-family:'Noto Serif TC',serif;
+  font-size:clamp(28px,8vw,42px);font-weight:900;
+  background:linear-gradient(135deg,var(--star-gold),var(--accent-warm));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  line-height:1.1;margin-bottom:8px;
+}
+.card-divider{
+  width:40px;height:2px;
+  background:linear-gradient(90deg,var(--star-gold),transparent);
+  margin-bottom:16px;border-radius:2px;
+}
+.card-question{
+  font-family:'Noto Serif TC',serif;
+  font-size:clamp(14px,3.8vw,17px);line-height:1.7;
+  color:var(--text-primary);
+  flex:1;display:flex;align-items:center;
+  word-break:break-word;
+  overflow-y:auto;
+}
+.card-front-footer{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-top:12px;padding-top:12px;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.card-hint{font-size:10px;color:var(--text-secondary)}
+
+/* === CONTROLS === */
+.controls{
+  padding:6px 20px 4px;flex-shrink:0;
+  display:flex;flex-direction:column;gap:6px;
+}
+
+/* MODE TABS */
+.mode-tabs{
+  display:flex;gap:6px;
+  background:var(--glass);
+  border:1px solid var(--glass-border);
+  border-radius:14px;padding:4px;
+  backdrop-filter:blur(10px);
+}
+.mode-tab{
+  flex:1;text-align:center;
+  padding:8px 0;border-radius:11px;
+  font-size:12px;font-weight:500;
+  color:var(--text-secondary);
+  border:none;background:transparent;cursor:pointer;
+  transition:all .25s;
+}
+.mode-tab.active{
+  background:linear-gradient(135deg,rgba(255,107,157,.15),rgba(255,212,117,.1));
+  color:var(--star-gold);
+  box-shadow:0 2px 12px rgba(255,212,117,.1);
+}
+
+/* STAGE SELECTOR */
+.stage-selector{
+  display:none;gap:4px;
+  overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  padding:2px 0;
+}
+.stage-selector::-webkit-scrollbar{display:none}
+.stage-selector.visible{display:flex}
+.stage-btn{
+  flex-shrink:0;
+  padding:6px 14px;border-radius:10px;
+  font-size:11px;font-weight:500;
+  color:var(--text-secondary);
+  background:var(--glass);border:1px solid var(--glass-border);
+  cursor:pointer;white-space:nowrap;
+  transition:all .25s;
+}
+.stage-btn.active{
+  color:var(--accent-pink);
+  border-color:rgba(255,107,157,.3);
+  background:rgba(255,107,157,.08);
+}
+
+/* DRAW BUTTON */
+.draw-btn{
+  width:100%;padding:12px;border-radius:16px;
+  font-family:'Noto Serif TC',serif;
+  font-size:16px;font-weight:700;letter-spacing:2px;
+  color:#fff;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--accent-rose),var(--accent-pink));
+  box-shadow:0 4px 20px rgba(255,107,157,.3);
+  transition:all .25s;
+  position:relative;overflow:hidden;
+}
+.draw-btn:active{transform:scale(.97);box-shadow:0 2px 10px rgba(255,107,157,.2)}
+.draw-btn:disabled{opacity:.4;cursor:default;transform:none}
+.draw-btn .shimmer{
+  position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.15) 50%,transparent 60%);
+  animation:shimmer 3s infinite;
+}
+@keyframes shimmer{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+
+/* BOTTOM BAR */
+.bottom-bar{
+  padding:4px 20px 10px;
+  display:flex;gap:8px;flex-shrink:0;
+}
+.bottom-btn{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:6px;
+  padding:10px;border-radius:12px;
+  font-size:11px;color:var(--text-secondary);
+  background:var(--glass);border:1px solid var(--glass-border);
+  cursor:pointer;backdrop-filter:blur(10px);
+  transition:all .2s;
+}
+.bottom-btn:active{background:rgba(255,255,255,.06)}
+.bottom-btn .icon{font-size:15px}
+
+/* safe area */
+.safe-bottom{height:env(safe-area-inset-bottom,0);flex-shrink:0}
+
+/* === DRAWER === */
+.drawer-overlay{
+  position:fixed;inset:0;background:rgba(0,0,0,.6);
+  z-index:100;opacity:0;pointer-events:none;
+  transition:opacity .3s;
+}
+.drawer-overlay.open{opacity:1;pointer-events:auto}
+.drawer{
+  position:fixed;bottom:0;left:0;right:0;
+  max-height:70vh;
+  background:linear-gradient(180deg,#141a3a,#0d1028);
+  border-top:1px solid var(--card-border);
+  border-radius:20px 20px 0 0;
+  z-index:101;
+  transform:translateY(100%);
+  transition:transform .35s cubic-bezier(.32,.72,0,1);
+  display:flex;flex-direction:column;
+}
+.drawer.open{transform:translateY(0)}
+.drawer-handle{
+  width:36px;height:4px;border-radius:4px;
+  background:rgba(255,255,255,.15);
+  margin:10px auto 6px;flex-shrink:0;
+}
+.drawer-title{
+  font-family:'Noto Serif TC',serif;
+  font-size:16px;font-weight:700;
+  text-align:center;padding:4px 0 12px;
+  color:var(--star-gold);flex-shrink:0;
+}
+.drawer-list{
+  flex:1;overflow-y:auto;padding:0 16px 20px;
+  -webkit-overflow-scrolling:touch;
+}
+.drawer-item{
+  padding:12px 14px;
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--glass-border);
+  border-radius:12px;margin-bottom:8px;
+  font-size:13px;line-height:1.6;
+  color:var(--text-primary);
+}
+.drawer-item .di-num{
+  font-family:'Noto Serif TC',serif;
+  font-weight:700;color:var(--star-gold);
+  margin-right:6px;
+}
+.drawer-empty{
+  text-align:center;padding:40px 0;
+  color:var(--text-secondary);font-size:13px;
+}
+
+/* === SETTINGS DRAWER === */
+.settings-section{padding:0 20px 20px}
+.settings-label{font-size:12px;color:var(--text-secondary);margin-bottom:8px}
+.player-input-row{display:flex;gap:8px;margin-bottom:16px}
+.player-input{
+  flex:1;padding:10px 14px;border-radius:12px;
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--glass-border);
+  color:var(--text-primary);font-size:14px;
+  font-family:'Noto Sans TC',sans-serif;
+  outline:none;
+}
+.player-input:focus{border-color:var(--star-gold)}
+.player-input::placeholder{color:var(--text-secondary)}
+.reset-btn{
+  width:100%;padding:12px;border-radius:12px;
+  background:rgba(255,60,60,.1);border:1px solid rgba(255,60,60,.2);
+  color:#ff6b6b;font-size:13px;cursor:pointer;
+  transition:all .2s;
+}
+.reset-btn:active{background:rgba(255,60,60,.2)}
+
+/* === DONE OVERLAY === */
+.done-overlay{
+  position:fixed;inset:0;z-index:200;
+  background:rgba(10,14,39,.9);
+  display:none;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:16px;text-align:center;padding:40px;
+}
+.done-overlay.show{display:flex}
+.done-icon{font-size:64px}
+.done-title{
+  font-family:'Noto Serif TC',serif;
+  font-size:24px;font-weight:700;
+  background:linear-gradient(135deg,var(--star-gold),var(--accent-pink));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.done-sub{font-size:14px;color:var(--text-secondary);line-height:1.8}
+.done-btn{
+  margin-top:12px;padding:12px 32px;border-radius:14px;
+  background:linear-gradient(135deg,var(--accent-rose),var(--accent-pink));
+  color:#fff;font-size:14px;font-weight:700;border:none;cursor:pointer;
+  font-family:'Noto Serif TC',serif;letter-spacing:1px;
+}
+.done-share{
+  margin-top:8px;font-size:12px;color:var(--text-secondary);
+  cursor:pointer;text-decoration:underline;text-underline-offset:3px;
+}
+
+/* particles burst */
+.particle{
+  position:fixed;width:4px;height:4px;border-radius:50%;
+  pointer-events:none;z-index:50;
+}
+@keyframes particleBurst{
+  0%{opacity:1;transform:translate(0,0) scale(1)}
+  100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)}
+}
+
+/* === SHARE TOAST === */
+.share-toast{
+  position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);
+  background:rgba(255,212,117,.15);border:1px solid rgba(255,212,117,.3);
+  color:var(--star-gold);font-size:13px;
+  padding:10px 20px;border-radius:14px;
+  backdrop-filter:blur(10px);
+  opacity:0;pointer-events:none;
+  transition:all .3s;z-index:250;
+}
+.share-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "情侶深度對話卡牌",
+  "description": "專為情侶設計的深度對話卡牌遊戲，80 個讓靈魂靠近的提問",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "TWD"
+  }
+}
+</script>
+</head>
+<body>
+<div class="stars-container" id="stars"></div>
+<div class="aurora"></div>
+
+<!-- WELCOME SCREEN -->
+<div class="welcome-overlay" id="welcomeOverlay">
+  <div class="welcome-icon">✦</div>
+  <div class="welcome-title">情侶深度對話卡牌</div>
+  <div class="welcome-subtitle">80 個讓靈魂靠近的提問<br>從心動悸動到信任成長<br>在星空下，來一場靈魂的對話吧</div>
+  <div class="welcome-form">
+    <div class="welcome-label">輸入你們的名字</div>
+    <input class="welcome-input" id="welcomeP1" placeholder="玩家 A 的名字" autocomplete="off">
+    <input class="welcome-input" id="welcomeP2" placeholder="玩家 B 的名字" autocomplete="off">
+    <button class="welcome-start-btn" id="welcomeStartBtn">✦ 開始對話之旅 ✦</button>
+    <div class="welcome-solo" id="welcomeSolo">一個人也能玩</div>
+  </div>
+</div>
+
+<!-- AD BANNER TOP -->
+<div class="ad-banner-top" id="adTop">
+  <!-- AdSense: Replace data-ad-client and data-ad-slot with your own -->
+  <ins class="adsbygoogle"
+       style="display:inline-block;width:320px;height:50px"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"></ins>
+</div>
+
+<div class="app">
+  <div class="header">
+    <div class="title">✦ 情侶深度對話卡牌</div>
+    <div class="header-right">
+      <div class="progress-pill" id="progressPill">0 / 80</div>
+      <button class="share-btn" onclick="shareGame()" title="分享給朋友">🔗</button>
+    </div>
+  </div>
+
+  <div class="turn-banner" id="turnBanner"></div>
+
+  <div class="main">
+    <div class="card-scene" id="cardScene">
+      <div class="card-inner" id="cardInner">
+        <!-- BACK -->
+        <div class="card-face card-back">
+          <div class="card-back-icon">✦</div>
+          <div class="card-back-text">點擊翻牌</div>
+          <div class="card-back-deco"></div>
+          <span class="corner-star">✦</span><span class="corner-star">✦</span>
+          <span class="corner-star">✦</span><span class="corner-star">✦</span>
+        </div>
+        <!-- FRONT -->
+        <div class="card-face card-front" id="cardFront">
+          <div class="card-stage" id="cardStage"></div>
+          <div class="card-number" id="cardNum"></div>
+          <div class="card-divider"></div>
+          <div class="card-question" id="cardQ"></div>
+          <div class="card-front-footer">
+            <div class="card-hint">點擊卡牌可自由翻看</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="random" onclick="setMode('random')">🎲 隨機抽牌</button>
+      <button class="mode-tab" data-mode="stage" onclick="setMode('stage')">📖 按階段抽</button>
+    </div>
+    <div class="stage-selector" id="stageSelector">
+      <button class="stage-btn active" data-stage="0" onclick="setStage(0)">全部</button>
+      <button class="stage-btn" data-stage="1" onclick="setStage(1)">💕 吸引</button>
+      <button class="stage-btn" data-stage="2" onclick="setStage(2)">🔍 探索</button>
+      <button class="stage-btn" data-stage="3" onclick="setStage(3)">🤝 理解</button>
+      <button class="stage-btn" data-stage="4" onclick="setStage(4)">🌱 成長</button>
+    </div>
+    <button class="draw-btn" id="drawBtn" onclick="drawCard()">
+      <span class="shimmer"></span>
+      ✦ 抽一張卡牌 ✦
+    </button>
+  </div>
+
+  <div class="bottom-bar">
+    <div class="bottom-btn" onclick="openDrawer('history')">
+      <span class="icon">📜</span> 已抽紀錄
+    </div>
+    <div class="bottom-btn" onclick="openDrawer('settings')">
+      <span class="icon">⚙️</span> 設定
+    </div>
+  </div>
+  <div class="safe-bottom"></div>
+</div>
+
+<!-- DRAWERS -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-handle"></div>
+  <div class="drawer-title" id="drawerTitle"></div>
+  <div class="drawer-list" id="drawerContent"></div>
+</div>
+
+<!-- DONE -->
+<div class="done-overlay" id="doneOverlay">
+  <div class="done-icon">🌟</div>
+  <div class="done-title">所有卡牌都抽完了！</div>
+  <div class="done-sub">你們的靈魂，又靠近了一點點 ✨</div>
+  <button class="done-btn" onclick="resetGame()">♻️ 重新開始</button>
+  <div class="done-share" onclick="shareGame()">分享給朋友一起玩</div>
+</div>
+
+<!-- SHARE TOAST -->
+<div class="share-toast" id="shareToast">已複製連結！分享給朋友吧 ✨</div>
+
+<script>
+// === DATA ===
+const stages = [
+  {id:1,name:'吸引與悸動',short:'吸引',icon:'💕',range:[1,20]},
+  {id:2,name:'自我與探索',short:'探索',icon:'🔍',range:[21,40]},
+  {id:3,name:'互動與理解',short:'理解',icon:'🤝',range:[41,60]},
+  {id:4,name:'信任與成長',short:'成長',icon:'🌱',range:[61,80]},
+];
+
+const questions = [
+  "第一次見面時，對方身上哪個特質最吸引你？",
+  "你覺得你們之間最有「火花」的一刻是什麼時候？",
+  "如果要把對方比喻成一種味道，你會選什麼？",
+  "對方做過哪件微不足道的小事，曾讓你心跳漏了一拍？",
+  "你最喜歡對方怎麼稱呼你？",
+  "在你眼裡，對方最性感的時刻是什麼時候？",
+  "如果你們初識那天可以重來一次，你會想說的第一句話是什麼？",
+  "你最喜歡哪一種跟對方相處的「肢體接觸」（例如牽手、擁抱、摸頭）？",
+  "哪一首歌會讓你立刻聯想到對方？",
+  "你覺得對方最可愛的「怪癖」是什麼？",
+  "第一次約會後，你回家對對方的評價是什麼？",
+  "對方穿什麼樣的衣服最讓你心動？",
+  "如果你們現在在電影院，你會想偷偷牽對方的手嗎？",
+  "你覺得對方笑起來的時候，眼神裡藏著什麼？",
+  "哪次讚美曾讓你開心很久？",
+  "你覺得你們之間最像「命中注定」的一個巧合是什麼？",
+  "你最希望對方多對你做什麼樣的心動小舉動？",
+  "如果要用一個詞形容你對對方的第一印象與現在的落差？",
+  "你最喜歡看著對方專注做什麼事？",
+  "哪一次驚喜（或小禮物）最讓你印象深刻？",
+  "你小時候最害怕的事情，現在還害怕嗎？",
+  "如果可以回到過去改變一件事，那會是什麼？",
+  "對你來說，真正的「安全感」是什麼樣子的？",
+  "你最引以為傲的成就感來源是什麼？",
+  "什麼樣的行為會讓你覺得「不被尊重」？",
+  "如果生命只剩最後一年，你最想跟對方一起完成什麼？",
+  "你覺得自己最難被他人理解的一點是什麼？",
+  "哪一段過去的感情（或友誼）對你影響最深？",
+  "當你心情低落時，你習慣獨處還是有人陪伴？",
+  "你最理想的「退休生活」長什麼樣子？",
+  "如果你可以擁有一種超能力，你希望是什麼？",
+  "你覺得自己最像哪一種動物？為什麼？",
+  "你最想改掉自己的一個性格缺點是什麼？",
+  "什麼樣的對話會讓你感到疲累？",
+  "你相信這世界上有「靈魂伴侶」嗎？",
+  "在你的成長過程中，誰對你的價值觀影響最大？",
+  "有哪件事是你一直想做卻不敢嘗試的？",
+  "當你感到壓力很大時，對方該怎麼做才能幫到你？",
+  "你對「成功」的定義是什麼？",
+  "如果你可以選擇在世界上任何地方生活，你會選哪裡？",
+  "對你來說，你們之間最珍貴、最不能取代的是什麼？",
+  "如果你們吵架了，你最希望對方先開口說什麼？",
+  "你覺得對方最懂你的一個瞬間是什麼？",
+  "有沒有哪次對方的行為讓你感到「被忽視」了？",
+  "你們最契合的價值觀是什麼？",
+  "你覺得你們在處理衝突時，還有什麼可以改進的地方？",
+  "對你而言，一段關係中「誠實」與「隱私」的界線在哪？",
+  "你最喜歡你們一起做的休閒活動是什麼？",
+  "哪次旅行（或出遊）是你最難忘的？",
+  "當對方不在身邊時，你最想念的是什麼？",
+  "你覺得對方為這段關係做過最大的改變是什麼？",
+  "如果你們以後有小孩，你覺得對方會是一個什麼樣的父母？",
+  "哪種「愛的語言」最能讓你感受到愛？（肯定的言語、服務的行動、真摯的禮物、精心的時刻、身體的接觸）",
+  "有什麼事是你一直想對對方說，卻遲遲沒開口的？",
+  "你覺得你們目前的溝通頻率是你喜歡的嗎？",
+  "哪一個屬於你們兩人的「小默契」讓你覺得很幸福？",
+  "如果對方可以幫你分擔一件家務或瑣事，你希望是什麼？",
+  "當你們意見分歧時，你通常會選擇退讓還是據理力爭？",
+  "你覺得對方在你家人朋友面前的表現如何？",
+  "你最喜歡對方怎麼表達對你的支持？",
+  "十年後的你們，你想像中會是在做什麼？",
+  "為了這段關係，你願意做出的最大犧牲是什麼？",
+  "你覺得「信任」是需要贏取的，還是預設就該有的？",
+  "如果你們遇到重大的經濟挑戰，你對對方有信心嗎？",
+  "你覺得你們能一起變老最關鍵的因素是什麼？",
+  "在這段關係裡，你最害怕失去的是什麼？",
+  "哪一件事讓你覺得「跟這個人在一起一輩子也不錯」？",
+  "如果對方生重病或遇到意外，你最擔心的會是什麼？",
+  "你希望你們如何一起規劃未來的財務？",
+  "你們之間還有什麼需要共同建立的「安全感」？",
+  "你覺得你們如何才能保持愛情的「新鮮感」？",
+  "當你對未來感到迷惘時，你希望對方扮演什麼角色？",
+  "你覺得這段關係讓你成長最多的地方在哪？",
+  "有沒有什麼夢想，是你希望你們一起去實現的？",
+  "如果你們以後發生嚴重分歧，你願意一起去做諮商或尋求幫助嗎？",
+  "你對「忠誠」的定義是什麼？",
+  "你覺得對方是那個可以讓你放下所有防備的人嗎？",
+  "對你來說，什麼才算是「完美的家」？",
+  "如果要把這段感情寫成一本書，你會取什麼名字？",
+  "此刻，你有什麼話想對對方說嗎？"
+];
+
+// === STATE ===
+let drawn = new Set();
+let mode = 'random';
+let selectedStage = 0;
+let isFlipped = false;
+let currentCard = null;
+let players = ['玩家 A','玩家 B'];
+let currentPlayer = 0;
+let dualMode = true;
+let gameStarted = false;
+
+// Restore from localStorage
+try {
+  const saved = localStorage.getItem('couple_cards_v1');
+  if (saved) {
+    const s = JSON.parse(saved);
+    drawn = new Set(s.drawn || []);
+    players = s.players || players;
+    currentPlayer = s.currentPlayer || 0;
+    dualMode = s.dualMode !== undefined ? s.dualMode : true;
+    gameStarted = s.gameStarted || false;
+  }
+} catch(e){}
+
+function saveState() {
+  try {
+    localStorage.setItem('couple_cards_v1', JSON.stringify({
+      drawn: [...drawn],
+      players,
+      currentPlayer,
+      dualMode,
+      gameStarted
+    }));
+  } catch(e){}
+}
+
+// === WELCOME ===
+function initWelcome() {
+  if (gameStarted) {
+    document.getElementById('welcomeOverlay').classList.add('hidden');
+    return;
+  }
+  const startBtn = document.getElementById('welcomeStartBtn');
+  const soloBtn = document.getElementById('welcomeSolo');
+
+  startBtn.addEventListener('click', () => {
+    const p1 = document.getElementById('welcomeP1').value.trim();
+    const p2 = document.getElementById('welcomeP2').value.trim();
+    if (p1) players[0] = p1;
+    if (p2) players[1] = p2;
+    dualMode = true;
+    gameStarted = true;
+    saveState();
+    document.getElementById('welcomeOverlay').classList.add('hidden');
+    updateUI();
+  });
+
+  soloBtn.addEventListener('click', () => {
+    dualMode = false;
+    gameStarted = true;
+    saveState();
+    document.getElementById('welcomeOverlay').classList.add('hidden');
+    updateUI();
+  });
+}
+
+// === STARS ===
+function createStars() {
+  const c = document.getElementById('stars');
+  for (let i = 0; i < 120; i++) {
+    const s = document.createElement('div');
+    s.className = 'star' + (Math.random() > .4 ? ' twinkle' : '');
+    const size = Math.random() * 2.5 + .5;
+    s.style.cssText = `
+      width:${size}px;height:${size}px;
+      top:${Math.random()*100}%;left:${Math.random()*100}%;
+      opacity:${Math.random()*.6+.2};
+      --dur:${Math.random()*3+2}s;
+      --o1:${Math.random()*.3+.1};
+      --o2:${Math.random()*.5+.5};
+      animation-delay:${Math.random()*5}s;
+    `;
+    c.appendChild(s);
+  }
+}
+
+function shootingStar() {
+  const c = document.getElementById('stars');
+  const s = document.createElement('div');
+  s.className = 'shooting-star';
+  s.style.top = Math.random() * 40 + '%';
+  s.style.left = Math.random() * 60 + 20 + '%';
+  s.style.animation = `shoot ${Math.random()*1+1.5}s linear forwards`;
+  c.appendChild(s);
+  setTimeout(() => s.remove(), 3000);
+}
+setInterval(shootingStar, 6000);
+setTimeout(shootingStar, 2000);
+
+// === PARTICLES ===
+function burstParticles(x, y) {
+  const colors = ['#ffd475','#ff6b9d','#e8e4ff','#ffb347','#c44569'];
+  for (let i = 0; i < 12; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const angle = (Math.PI * 2 / 12) * i + Math.random() * .5;
+    const dist = 60 + Math.random() * 80;
+    p.style.cssText = `
+      left:${x}px;top:${y}px;
+      background:${colors[i % colors.length]};
+      --tx:${Math.cos(angle)*dist}px;
+      --ty:${Math.sin(angle)*dist}px;
+      animation:particleBurst .7s ease-out forwards;
+    `;
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), 800);
+  }
+}
+
+// === HELPERS ===
+function getStageForNum(n) {
+  return stages.find(s => n >= s.range[0] && n <= s.range[1]);
+}
+function getAvailable() {
+  let pool = [];
+  for (let i = 1; i <= 80; i++) {
+    if (drawn.has(i)) continue;
+    if (mode === 'stage' && selectedStage > 0) {
+      const st = stages[selectedStage - 1];
+      if (i < st.range[0] || i > st.range[1]) continue;
+    }
+    pool.push(i);
+  }
+  return pool;
+}
+
+function updateUI() {
+  document.getElementById('progressPill').textContent = `${drawn.size} / 80`;
+  const avail = getAvailable();
+  const btn = document.getElementById('drawBtn');
+  btn.disabled = avail.length === 0;
+  if (avail.length === 0 && drawn.size >= 80) {
+    document.getElementById('doneOverlay').classList.add('show');
+  }
+  const banner = document.getElementById('turnBanner');
+  if (dualMode) {
+    banner.innerHTML = `✦ <span class="player-name">${players[currentPlayer]}</span> 的回合`;
+  } else {
+    banner.innerHTML = '';
+  }
+}
+
+// === MODES ===
+function setMode(m) {
+  mode = m;
+  document.querySelectorAll('.mode-tab').forEach(t => t.classList.toggle('active', t.dataset.mode === m));
+  document.getElementById('stageSelector').classList.toggle('visible', m === 'stage');
+  if (isFlipped) flipBack();
+  updateUI();
+}
+
+function setStage(s) {
+  selectedStage = s;
+  document.querySelectorAll('.stage-btn').forEach(b => b.classList.toggle('active', +b.dataset.stage === s));
+  if (isFlipped) flipBack();
+  updateUI();
+}
+
+// === CARD ===
+function flipBack() {
+  isFlipped = false;
+  document.getElementById('cardInner').classList.remove('flipped');
+}
+
+document.getElementById('cardScene').addEventListener('click', (e) => {
+  isFlipped = !isFlipped;
+  document.getElementById('cardInner').classList.toggle('flipped', isFlipped);
+});
+
+function drawCard() {
+  const avail = getAvailable();
+  if (avail.length === 0) return;
+
+  const inner = document.getElementById('cardInner');
+
+  const revealNew = () => {
+    const num = avail[Math.floor(Math.random() * avail.length)];
+    const stage = getStageForNum(num);
+    currentCard = num;
+
+    document.getElementById('cardStage').textContent = `第${stage.id}階段 · ${stage.name}`;
+    document.getElementById('cardNum').textContent = `# ${String(num).padStart(2,'0')}`;
+    document.getElementById('cardQ').textContent = questions[num - 1];
+
+    isFlipped = true;
+    inner.classList.add('flipped');
+
+    const rect = document.getElementById('cardScene').getBoundingClientRect();
+    burstParticles(rect.left + rect.width / 2, rect.top + rect.height / 2);
+
+    drawn.add(num);
+    if (dualMode) currentPlayer = (currentPlayer + 1) % 2;
+    saveState();
+    updateUI();
+  };
+
+  if (isFlipped) {
+    isFlipped = false;
+    inner.classList.remove('flipped');
+    setTimeout(revealNew, 400);
+  } else {
+    revealNew();
+  }
+}
+
+// === SHARE ===
+function shareGame() {
+  const url = window.location.href;
+  const text = '情侶深度對話卡牌 — 80 個讓靈魂靠近的提問 ✨ 跟另一半一起玩吧！';
+
+  if (navigator.share) {
+    navigator.share({ title: '情侶深度對話卡牌', text, url }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(url + '\n' + text).then(() => {
+      const toast = document.getElementById('shareToast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    }).catch(() => {});
+  }
+}
+
+// === DRAWER ===
+function openDrawer(type) {
+  const overlay = document.getElementById('drawerOverlay');
+  const drawer = document.getElementById('drawer');
+  const title = document.getElementById('drawerTitle');
+  const content = document.getElementById('drawerContent');
+
+  if (type === 'history') {
+    title.textContent = '📜 已抽紀錄';
+    if (drawn.size === 0) {
+      content.innerHTML = '<div class="drawer-empty">還沒抽過任何卡牌<br>開始你們的對話之旅吧 ✨</div>';
+    } else {
+      const sorted = [...drawn].sort((a, b) => a - b);
+      content.innerHTML = sorted.map(n => {
+        const st = getStageForNum(n);
+        return `<div class="drawer-item"><span class="di-num">${st.icon} #${String(n).padStart(2,'0')}</span>${questions[n-1]}</div>`;
+      }).join('');
+    }
+  } else if (type === 'settings') {
+    title.textContent = '⚙️ 設定';
+    content.innerHTML = `
+      <div class="settings-section">
+        <div class="settings-label">雙人模式 — 玩家名稱</div>
+        <div class="player-input-row">
+          <input class="player-input" id="p1Input" placeholder="玩家 A" value="${players[0]}">
+          <input class="player-input" id="p2Input" placeholder="玩家 B" value="${players[1]}">
+        </div>
+        <div class="settings-label" style="margin-bottom:12px">已抽 ${drawn.size} / 80 張卡牌</div>
+        <button class="reset-btn" id="resetBtn">🔄 重置遊戲，重新開始</button>
+      </div>
+    `;
+    setTimeout(() => {
+      const p1 = document.getElementById('p1Input');
+      const p2 = document.getElementById('p2Input');
+      const rb = document.getElementById('resetBtn');
+      if (p1) p1.addEventListener('change', () => { players[0] = p1.value || '玩家 A'; saveState(); updateUI(); });
+      if (p2) p2.addEventListener('change', () => { players[1] = p2.value || '玩家 B'; saveState(); updateUI(); });
+      if (rb) rb.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (confirm('確定要重新開始嗎？所有紀錄將被清除。')) { resetGame(); }
+      });
+    }, 100);
+  }
+
+  overlay.classList.add('open');
+  drawer.classList.add('open');
+}
+
+function closeDrawer() {
+  document.getElementById('drawerOverlay').classList.remove('open');
+  document.getElementById('drawer').classList.remove('open');
+}
+
+function resetGame() {
+  drawn.clear();
+  currentPlayer = 0;
+  currentCard = null;
+  isFlipped = false;
+  gameStarted = false;
+  document.getElementById('cardInner').classList.remove('flipped');
+  document.getElementById('doneOverlay').classList.remove('show');
+  saveState();
+  closeDrawer();
+  // show welcome again
+  document.getElementById('welcomeOverlay').classList.remove('hidden');
+  setTimeout(updateUI, 50);
+}
+
+// === AD INIT ===
+function initAds() {
+  try { (adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
+}
+
+// === GA (optional) ===
+// Uncomment and replace GA_MEASUREMENT_ID:
+// <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+// window.dataLayer = window.dataLayer || [];
+// function gtag(){dataLayer.push(arguments);}
+// gtag('js', new Date());
+// gtag('config', 'GA_MEASUREMENT_ID');
+
+// === INIT ===
+createStars();
+initWelcome();
+updateUI();
+initAds();
+</script>
+</body>
+</html>
